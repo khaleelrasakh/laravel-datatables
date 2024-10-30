@@ -1,5 +1,5 @@
 {
-    "name": "yajra/laravel-datatables-oracle",
+    "name": "khaleel/laravel-datatables-oracle",
     "description": "jQuery DataTables API for Laravel",
     "keywords": [
         "yajra",
@@ -12,6 +12,10 @@
         {
             "name": "Arjay Angeles",
             "email": "aqangeles@gmail.com"
+        },
+        {
+            "name": "Khaleel",
+            "email": "khaleelrasakh@gmail.com"
         }
     ],
     "require": {
