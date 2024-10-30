@@ -80,12 +80,12 @@ class QueryDataTable extends DataTableAbstract
      */
     protected bool $disableUserOrdering = false;
 
-    public function __construct($query)
+    public function __construct(protected $query)
     {
         $this->request = app('datatables.request');
         $this->config = app('datatables.config');
         $this->columns = $this->query->getColumns();
-
+        
         if ($this->config->isDebugging()) {
             $this->getConnection()->enableQueryLog();
         }
@@ -118,6 +118,7 @@ class QueryDataTable extends DataTableAbstract
     {
         try {
             $results = $this->prepareQuery()->results();
+           
             $processed = $this->processResults($results, $mDataSupport);
             $data = $this->transform($results, $processed);
 
