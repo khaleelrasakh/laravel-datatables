@@ -80,7 +80,7 @@ class QueryDataTable extends DataTableAbstract
      */
     protected bool $disableUserOrdering = false;
 
-    public function __construct(protected QueryBuilder $query)
+    public function __construct($query)
     {
         $this->request = app('datatables.request');
         $this->config = app('datatables.config');
